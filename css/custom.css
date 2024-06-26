@@ -1,0 +1,31 @@
+/* 顶部文字样式 */
+.top-text {
+    font-family: '华文行楷', serif;
+    font-size: 50px;
+    color: transparent;
+    background-image: linear-gradient(to bottom right, indianred, white);
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin: 0;
+    padding: 20px 0;
+}
+
+/* 导航栏样式 */
+.navbar-light.bg-clay {
+    background-color: rgba(178, 34, 34, 0.7); /* 火砖色透明度70% */
+}
+.navbar .nav-link {
+    transition: background-color 0.3s ease;
+}
+.navbar .nav-link:hover {
+    background-color: rgba(102, 0, 0, 0.5); /* 鼠标悬停时的深色渐变 */
+}
+
+/* 轮播图片容器样式 */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 400px; /* 根据需要调整高度 */
+    overflow: hidden;
+}
+/* 轮播图片内部实现需根据实际库或自定义代码添加 */

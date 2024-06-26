@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../css/base.css">
+    <meta charset="utf-8">
+    <title>承颐轩非遗项目</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="../css/竖排布局.css">
+    <script src="../js/vue.min.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+</head>
+<body style="background-image: linear-gradient(to bottom,SeaShell, white); overflow-y: auto;">
+<div style="color:brown; font-family: 华文行楷; font-size: 50px; font-weight: bold; text-decoration: none;">承颐轩非遗项目</div>
+<nav class="navbar navbar-default" role="navigation" style="background-color:darkred;">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav" style="display: flex; justify-content: space-around; width: 100%; padding: 0;">
+            <li><a href="index.html" style="color: white; font-size: 20px;">首页</a></li>
+            <li><a href="introduce.html" style="color: white; font-size: 20px;">项目介绍</a></li>
+            <li><a href="get_food.html" style="color: white; font-size: 20px;">项目方案</a></li>
+            <li><a href="find_order.html" style="color: white; font-size: 20px;">项目产品</a></li>
+            <li><a href="chengxiao.html" style="color: white;font-size: 20px">项目成效</a></li>
+            <li><a href="find.html" style="color: white;font-size: 20px">关于我们</a></li>
+        </ul>
+    </div>
+</nav>
+    <!-- Slider buttons styles are now in CSS -->
+    <button class="slider-button prev" aria-label="Previous Slide"> < </button>
+    <div class="slider">
+        <div id="slide-1" class="slide active">
+            <img src="feiyi1.jpg" alt="Image 1">
+        </div>
+        <div id="slide-2" class="slide">
+            <img src="feiyi2.jpg" alt="Image 1">
+        </div>
+    </div>
+</div>
+    <button class="slider-button next" aria-label="Next Slide"> > </button>
+</body>
+<style>
+    body {
+        /* 页面背景渐变 */
+        background-image: linear-gradient(to bottom,SeaShell, white);
+    }
+    .container-fluid {
+        background-color: #FFFFFF00;
+    }
+
+    .navbar-header {
+        display: flex;
+        justify-content: center;
+        padding: 15px 0;
+    }
+
+    .navbar-brand, .nav.navbar-nav li a {
+        color: white;
+        font-size: 20px;
+        font-family: "楷体", SimKai, serif;
+        transition: background-color 0.3s ease;
+    }
+
+    .navbar-nav {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        padding: 0;
+    }
+
+    .nav.navbar-nav li a:hover {
+        background: linear-gradient(to right, rgba(255,255,255,0.2), rgba(255,255,255,0.4));
+    }
+    .slider {
+        width: 100%;
+        height: 90vh;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .slide {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    /* 确保第一张图片在页面加载时显示 */
+    .slide.active {
+        opacity: 1;
+    }
+
+    .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .slider-button {
+        position: absolute;
+        top: 40%;
+        width: 5%; /* 或根据需要调整的百分比 */
+        height: 25%;
+        background: black; /* 去除背景色 */
+        border: none; /* 去除边框 */
+        cursor: pointer;
+        outline: none;
+        z-index: 10; /* 确保按钮在最上层 */
+        opacity: 0.5; /* 设置初始透明度 */
+        transition: opacity 0.3s; /* 平滑过渡透明度 */
+    }
+
+    .slider-button:hover {
+        opacity: 1; /* 鼠标悬停时完全不透明 */
+    }
+
+    .prev {
+        left: 0;
+    }
+
+    .next {
+        right: 0;
+    }
+    body {
+        /* 页面背景渐变 */
+        background-image: linear-gradient(to bottom,SeaShell, white);
+        /* 确保轮播图占据除导航栏之外的全部空间 */
+        height: calc(100vh - 50px); /* 假设导航栏高度为50px，根据实际情况调整 */
+        overflow: hidden;
+    }
+    .container-fluid {
+        background-color: darkred;
+    }
+    @media (max-width: 767px) {
+        .slider-button {
+            width: 6%; /* 适当调整，保持与整体布局的比例 */
+        }
+        .slider {
+            width: 100%;
+            height: 30vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .slider-button {
+            position: absolute;
+            top: 30%;
+            width: 7%; /* 或根据需要调整的百分比 */
+            height: 15%;
+            background: black; /* 去除背景色 */
+            border: none; /* 去除边框 */
+            cursor: pointer;
+            outline: none;
+            z-index: 10; /* 确保按钮在最上层 */
+            opacity: 0.5; /* 设置初始透明度 */
+            transition: opacity 0.3s; /* 平滑过渡透明度 */
+        }
+
+        .slider-button:hover {
+            opacity: 1; /* 鼠标悬停时完全不透明 */
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+</style>
+
+
+<script src='../js/bundle.js'></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const slides = document.querySelectorAll('.slide');
+        const prevButton = document.querySelector('.slider-button.prev');
+        const nextButton = document.querySelector('.slider-button.next');
+        let currentSlideIndex = 0;
+        let intervalId; // 用于存储自动轮播的定时器ID
+
+        // 自动轮播函数
+        function startAutoSlide() {
+            intervalId = setInterval(function() {
+                nextButton.click(); // 模拟点击“下一张”按钮
+            }, 3000); // 每3秒自动切换一次
+        }
+
+        // 开始自动轮播
+        startAutoSlide();
+
+        // 向左按钮点击事件
+        prevButton.addEventListener('click', function(event) {
+            event.preventDefault();
+            clearInterval(intervalId); // 用户操作时停止自动轮播
+            currentSlideIndex = (currentSlideIndex === 0) ? slides.length - 1 : currentSlideIndex - 1;
+            updateSlide();
+            startAutoSlide(); // 更新完后重新开始自动轮播
+        });
+
+        // 向右按钮点击事件
+        nextButton.addEventListener('click', function(event) {
+            event.preventDefault();
+            clearInterval(intervalId); // 用户操作时停止自动轮播
+            currentSlideIndex = (currentSlideIndex === slides.length - 1) ? 0 : currentSlideIndex + 1;
+            updateSlide();
+            startAutoSlide(); // 更新完后重新开始自动轮播
+        });
+
+        function updateSlide() {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[currentSlideIndex].classList.add('active');
+        }
+    });
+</script>
+</html>
